@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "vocab-tools"
+version = "0.1.0"
+description = "broad ste of tools to analyze, dump, interact with useful rdf vocabs in the marine research domain"
+authors = ["Marc Portier <marc.portier@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "vocab_tools"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sema = {git = "https://github.com/vliz-be-opsci/py-sema.git", branch = "feature/query"}
+pandas = "^2.2.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

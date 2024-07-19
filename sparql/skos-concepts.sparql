@@ -1,0 +1,12 @@
+{#- Jinja Template producing SPARQL query to retrieve all SKOS concepts
+ | Variables in template:
+ |    - (optional) language: language of the preflabel to include (Default: 'en')
+-#}
+{%-if not language %}{% set language = "en" %}{%endif-%}
+
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?uri ?prefLabel WHERE {
+       ?uri skos:prefLabel ?prefLabel
+       FILTER (langMatches(lang(?prefLabel), '{{ language }}'))
+}
