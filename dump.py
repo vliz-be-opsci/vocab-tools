@@ -18,6 +18,7 @@ SEP: Dict[str, str] = dict(
 
 
 def make_skos_concepts_dump(sparql_endpoint: str, file_name: str):
+    log.debug(f"making dump for {sparql_endpoint} to {file_name}")
     try:
         # make GraphSource for endpoint
         source: GraphSource = GraphSource.build(sparql_endpoint)
