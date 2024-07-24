@@ -558,7 +558,7 @@ validators = "^0.28.3"
 type = "git"
 url = "https://github.com/vliz-be-opsci/py-sema.git"
 reference = "feature/query"
-resolved_reference = "885fe73abbbcefd2986df3b8fc003eda81679ff5"
+resolved_reference = "60867e34aeeca92789eb4636a3dc57aee358d847"
 
 [[package]]
 name = "setuptools"
