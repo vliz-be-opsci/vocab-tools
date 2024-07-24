@@ -10,3 +10,4 @@ SELECT ?uri ?prefLabel WHERE {
        ?uri skos:prefLabel ?prefLabel
        FILTER (langMatches(lang(?prefLabel), '{{ language }}'))
 }
+{{ "LIMIT" ~ N if N else "" }}
